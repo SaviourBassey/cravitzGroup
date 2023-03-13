@@ -1,0 +1,922 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Loan and Credit">
+
+<link rel="icon" href="{% static 'assets/images/brand/logo/logo.png' %}" type="image/png">
+
+
+
+<!-- Libs CSS -->
+
+<link rel="stylesheet" href="{% static 'assets/another/bootstrap-icons/font/bootstrap-icons.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/tiny-slider/dist/tiny-slider.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/nouislider/dist/nouislider.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/fonts/flat-font-icons/css/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'assets/fonts/fontello-icons/fontello.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/magnific-popup/dist/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/jquery-ui/dist/themes/base/jquery-ui.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/magnific-popup/dist/magnific-popup.css' %}">
+
+
+
+
+<!-- Theme CSS -->
+
+<link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+
+  <title>Home - Cravitzgroup</title>
+
+  <style>
+    @media screen and (max-width: 500px) {
+      #header-mobileView { 
+          display:none; 
+      }
+  }
+  </style>
+</head>
+
+<body>
+  <div class="bg-primary py-1">
+    <!-- top-bar -->
+    <div class="container px-md-0">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-xl-4 col-lg-5 col-md-5 col-12">
+                <div class="fs-6 text-uppercase text-white fw-semi-bold d-flex align-items-center"><span class="me-3"><div id="google_translate_element" style="color:white;"></div></span> <span><img src="{% static 'assets/images/finland-removebg-preview.png' %}" height=35 width=35> <img src="{% static 'assets/images/italian1-removebg-preview.png' %}" height=35 width=35> <img src="{% static 'assets/images/Slovakia-removebg-preview.png' %}" height=35 width=35></span></div>
+            </div>
+            <div class="col-xl-8 col-lg-7 col-md-7 col-12 text-md-end" id="header-mobileView">
+              <div class="fs-6 text-uppercase text-white fw-semi-bold"><a href="#!" class="ms-2 ms-md-4 "><a href="#!" class="text-white" >+44 666-Cravitz(FREE TOLL)</a></span> <span class="ms-2 ms-md-4"><a href="#!" class="text-white ">loans@Cravitzgroup.com</a></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg py-3 navbar-default">
+  <div class="container px-0">
+    <a class="navbar-brand" href="{% url 'home:home_view' %}"><img src="{% static 'assets/images/brand/logo/logo.png' %}"
+      alt="Awesome Logo" title="" width="146" height="39"/></a>
+    <!-- Button -->
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default"
+      aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar top-bar mt-0"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbar-default">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home:home_view' %}">
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home:about_view' %}">
+            About
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home:services_view' %}">
+            Services
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home:news_view' %}">
+            Blog
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'home:contact_view' %}">
+            Contact
+          </a>
+        </li>
+
+      <div class="ms-lg-3 mt-3 d-grid mt-lg-0">
+<button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply for Loan</button>
+</div>
+    </div>
+  </div>
+</nav>
+{% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" style="display:block; text-align:center;"><div>{{ message }}</div></div>
+{% endfor %}
+  <div class="position-relative">
+    <ul class="controls " id="sliderFirstControls">
+      <li class="prev">
+        <i class="fas fa-angle-left"></i>
+      </li>
+      <li class="next">
+        <i class="fas fa-angle-right"></i>
+      </li>
+    </ul>
+    <div class="sliderFirst">
+      <div class="item">
+        <div class="py-20" style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
+        rgba(20, 30, 40, 0.5) url({% static 'assets/images/slider/slider-1.jpg' %}) no-repeat center;">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div>
+                  <!-- slider-captions -->
+                  <h1 class="display-3 text-white fw-bold mb-3">Personal Loan to Suit Your <strong class="text-warning">Needs.</strong> </h1>
+                  <p class="text-white d-none d-xl-block d-lg-block d-sm-block">Do you need money? We grant fast loan.
+                  </p>
+                    <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</a>
+                </div>
+                <!-- /.slider-captions -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="py-20" style="background: linear-gradient(rgba(20, 30, 40, 0.5), rgba(20, 30, 40, 0.5)),
+        rgba(20, 30, 40, 0.5) url({% static 'assets/images/slider/slider-4.jpg' %}) no-repeat center;">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div>
+                  <!-- slider-captions -->
+                  <h1 class="display-3 text-white fw-bold mb-3">Loan with Great <br> <strong class="text-warning">Rates.</strong> </h1>
+                  <p class="text-white d-none d-xl-block d-lg-block d-sm-block">Apply for a loan now to meet needs like growing your business, paying rent, buying a car, paying school fees, etc.</p>
+                  <button href="#!" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</button>
+                </div>
+                <!-- /.slider-captions -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="py-20" style="background:linear-gradient(rgba(20, 30, 40, 0.7), rgba(20, 30, 40, 0.7)),
+        rgba(20, 30, 40, 0.5) url({% static 'assets/images/slider/slider-2.jpg' %}) no-repeat center;">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div>
+                  <!-- slider-captions -->
+
+                  <h1 class="display-3 text-white fw-bold mb-3 "> Lowest Car Loan <br> <strong class="text-warning">Rate.</strong> </h1>
+                  <p class="text-white d-none d-xl-block d-lg-block d-sm-block"> We provide an excellent service for all types of loans.
+                 </p>
+
+                 <button href="#!" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</button>
+                </div>
+                <!-- /.slider-captions -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-white smooth-shadow-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+          <div class="d-flex align-items-center justify-content-center py-4">
+            <div> <img src="{% static 'assets/images/svg/mortgage.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-svg-1x"></div>
+            <div class="ms-4 lh-1">
+              <h2 class="mb-0 fw-bold">2%</h2>
+              <p class="mb-0">Home Loans</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-6  border-start-lg">
+          <div class="d-flex align-items-center justify-content-center py-4">
+            <div> <img src="{% static 'assets/images/svg/loan.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-svg-1x"></div>
+            <div class="ms-4 lh-1">
+              <h2 class="mb-0 fw-bold">2%</h2>
+              <p class="mb-0">Personal Loans</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-6 border-start-lg">
+          <div class="d-flex align-items-center justify-content-center py-4">
+            <div> <img src="{% static 'assets/images/svg/car.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-svg-1x"></div>
+            <div class="ms-4 lh-1">
+              <h2 class="mb-0 fw-bold">2%</h2>
+              <p class="mb-0">Car Loans</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-6 col-6 border-start-lg">
+          <div class="d-flex align-items-center justify-content-center py-4">
+            <div> <img src="{% static 'assets/images/svg/credit-card.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-svg-1x"></div>
+            <div class="ms-4 lh-1">
+              <h2 class="mb-0 fw-bold">2%</h2>
+              <p class="mb-0">Wedding Loans</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-lg-16 py-10 ">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+          <div class="mb-8 text-center">
+            <!-- section title start-->
+            <h1 class="mb-3">Find Loans We Offers</h1>
+            <p class="lead px-md-8">We will match you with a loan program that meet your financial need. In short term liquidity, by striving to make funds available to them <strong>within 24
+                  hours of application.</strong></p>
+          </div>
+          <!-- /.section title start-->
+        </div>
+      </div>
+      <div class="position-relative">
+        <ul class="controls controls-bottom" id="sliderSecondControls">
+          <li class="prev">
+            <i class="fas fa-angle-left"></i>
+          </li>
+          <li class="next">
+            <i class="fas fa-angle-right"></i>
+          </li>
+        </ul>
+        <div class="sliderSecond">
+          <div class="item">
+            <div class="card smooth-shadow-sm border-0 m-2">
+              <div class="card-body p-5">
+                <div class="mb-5"> <img src="{% static 'assets/images/svg/loan.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-xxl"> </div>
+                <h3><a href="#!" class="text-inherit">Personal Loan</a></h3>
+                <p>A Personal Loan from Cravitz Group is a great way to consolidate high-interest rate balances, fund special purchases, or cover major expenses.
+                </p>
+                <button href="#!" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card smooth-shadow-sm border-0 m-2">
+              <div class="card-body p-5">
+                <div class="mb-5"> <img src="{% static 'assets/images/svg/mortgage.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-xxl"></div>
+                <h3><a href="#!" class="text-inherit">Home Loan</a></h3>
+                <p>Get a Home loan from Cravitz Group. Calculate your estimated monthly payments and learn the requirements for buying, refinancing or leasing a property.
+                </p>
+                <button href="#!" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card smooth-shadow-sm border-0 m-2">
+              <div class="card-body p-5">
+                <div class="mb-5"> <img src="{% static 'assets/images/svg/piggy-bank.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-xxl"></div>
+                <h3><a href="#!" class="text-inherit">Education Loan</a></h3>
+                <p>Our student loans can help cover up to 100% of your college or graduate school expenses, on campus or online. Apply for a student loan today.</p>
+                <button href="#!" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card smooth-shadow-sm border-0 m-2">
+              <div class="card-body p-5">
+                <div class="mb-5"> <img src="{% static 'assets/images/svg/loan.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-xxl"></div>
+                <h3><a href="#!" class="text-inherit">Business Loan</a></h3>
+                <p>We offer a variety of financing options for your business to purchase inventory and materials, refinance debt or finance account receivables.</p>
+                <button href="#!" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="card smooth-shadow-sm border-0 m-2">
+              <div class="card-body p-5">
+                <div class="mb-5"> <img src="{% static 'assets/images/svg/car.svg' %}" alt="Borrow - Loan Company Website Template" class="icon-xxl"></div>
+                <h3><a href="#!" class="text-inherit">Car Loan</a></h3>
+                <p>Apply online for a new or used Car Loan from Finlon Finance Group. Get approved for a financing based on your needs and within your budget.</p>
+                <button href="#!" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-lg-16 py-10 bg-white border-bottom border-top">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+          <div class="mb-10 text-center ">
+            <!-- section title start-->
+            <h1>Fast &amp; Easy Application Process.</h1>
+            <p>We don't delay your loan application.</p>
+          </div>
+          <!-- /.section title start-->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div class="card text-center mb-6 mt-4">
+            <div class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-primary">
+              <span class="fs-3 fw-bold">1</span></div>
+            <div class="card-body p-6">
+              <h3 class="mb-2">Submit your Application</h3>
+              <p class="mb-0">Fill out the loan application for provided on this website.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div class="card text-center mb-6 mt-4">
+            <div class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-primary">
+              <span class="fs-3 fw-bold">2</span></div>
+            <div class="card-body p-6">
+              <h3 class=" mb-2">Approved Your Loan</h3>
+              <p class="mb-0">Our customer care representative will get intouch with you via email to discuss terms involed to process your loan payment.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12">
+          <div class="card text-center mb-6 mt-4">
+            <div class="icon-shape icon-lg bg-white border border-primary border-2 rounded-circle mx-auto mt-n4 text-primary">
+              <span class="fs-3 fw-bold">3</span></div>
+
+            <div class="card-body p-6">
+
+              <h3 class=" mb-2">Get Your Cash</h3>
+              <p class="mb-0">Once approved you get paid directly into your bank account..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-12 text-center">
+          <button href="#!" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</button> </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-lg-16 py-10">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+          <div class="mb-10 text-center">
+            <!-- section title start-->
+            <h1 class="mb-2">Why People Choose Us</h1>
+            <p class="">Cravitz Group guides spenders and savers through the next steps of their financial journey. Whether you’re buying a home, paying off a loan or saving up for college, we offer the best tools and resources to help you reach your goals.</p>
+          </div>
+          <!-- /.section title start-->
+        </div>
+      </div>
+      <div class="row g-0">
+        <div class="col-xl-4 col-md-4 col-12">
+          <div class="card text-center rounded-0">
+            <div class="card-body p-6">
+              <div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor" class="bi bi-people text-primary" viewBox="0 0 16 16">
+                    <path
+                      d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                  </svg></div>
+              <h3>Dedicated Specialists</h3>
+              <!-- <p class="mb-4">Duis eget diam quis elit erdiet alidvolutp terdum tfanissim non intwesollis eu mauris.</p>
+              <a href="#!" class="btn btn-outline-primary btn-sm">Meet the team</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-4 col-12">
+          <div class="card text-center rounded-0">
+            <div class="card-body p-6">
+              <div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor" class="bi bi-trophy text-primary" viewBox="0 0 16 16">
+                    <path
+                      d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z" />
+                  </svg></div>
+              <h3>Success Stories Rating</h3>
+              <!-- <p class="mb-4">Integer facilisis fringilla dolor ut luctus lvinar felis miat velitliquam at lorem fermentum orci.</p>
+              <a href="#!" class="btn btn-outline-primary btn-sm">View Client Review</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-md-4 col-12">
+          <div class="card text-center rounded-0">
+            <div class="card-body p-6">
+              <div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" fill="currentColor" class="bi bi-calculator text-primary" viewBox="0 0 16 16">
+                    <path
+                      d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
+                    <path
+                      d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z" />
+                  </svg></div>
+              <h3>Lowest bank fees</h3>
+              <!-- <p class="mb-4"> Integer faisis fringilla dolor ut luctus nisi eneinar felis viverra dignissim fermentum orci.</p>
+              <a href="#!" class="btn btn-outline-primary btn-sm">Why choose us</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-dark py-lg-16 py-10">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+          <div class="mb-10 text-center">
+            <!-- section title start-->
+            <h1 class="text-white mb-2">Some of our Awesome Testimonials</h1>
+            <p class="text-white text-white-50"> What they’re talking about our company.</p>
+          </div>
+          <!-- /.section title start-->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-12 mb-6 mb-lg-0  ">
+          <div class="card border-0">
+            <div class="card-body p-5">
+              <p class="mb-0 fs-4 fst-italic fw-semi-bold text-dark"> “I loved the customer service you guys provided me. That was very nice and patient with questions I had. I would really like definitely come back here”</p>
+            </div>
+
+          </div>
+          <div class="d-flex align-items-center mt-4">
+            <div> <img src="{% static 'assets/images/avatar/avatar-1.jpg' %}" alt="Borrow - Loan Company Website Template" class="avatar avatar-md rounded-3">
+            </div>
+            <div class="ms-3 lh-1">
+              <h4 class="mb-0 text-white">Donny J. Griffin</h4>
+              <span class="fs-6 text-white-50 fw-bold">Personal Loan</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mb-6 mb-lg-0  ">
+          <div class="card border-0">
+            <div class="card-body p-5">
+              <p class="mb-0 fs-4 fst-italic fw-semi-bold text-dark"> “I had a good experience with Cravitz Loan Services. I am thankful to Cravitz for the help you guys gave me. My loan was easy and fast. thank you”</p>
+            </div>
+
+          </div>
+          <div class="d-flex align-items-center mt-4">
+            <div> <img src="{% static 'assets/images/avatar/avatar-2.jpg' %}" alt="Borrow - Loan Company Website Template" class="avatar avatar-md rounded-3">
+            </div>
+            <div class="ms-3 lh-1">
+              <h4 class="mb-0 text-white">Mary O. Randle</h4>
+              <span class="fs-6 text-white-50 fw-bold">Education Loan</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mb-6 mb-lg-0  ">
+          <div class="card border-0">
+            <div class="card-body p-5">
+              <p class="mb-0 fs-4 fst-italic fw-semi-bold text-dark"> “
+
+                I have contacted this site to request Credit. I have received the amount of 50,000 euros and am so thankful for how fast the entire process was.”</p>
+            </div>
+
+          </div>
+          <div class="d-flex align-items-center mt-4">
+            <div> <img src="{% static 'assets/images/avatar/avatar-4.jpg' %}" alt="Borrow - Loan Company Website Template" class="avatar avatar-md rounded-3">
+            </div>
+            <div class="ms-3 lh-1">
+              <h4 class="mb-0 text-white">Lindo E. Olson</h4>
+              <span class="fs-6 text-white-50 fw-bold">Car Loan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-4 bg-white shadow-sm">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6"> <img src="{% static 'assets/images/brand/company-logo/logo-1.jpg' %}" alt="Borrow - Loan Company Website Template" class="img-fluid"> </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6"> <img src="{% static 'assets/images/brand/company-logo/logo-2.jpg' %}" alt="Borrow - Loan Company Website Template" class="img-fluid"> </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6"> <img src="{% static 'assets/images/brand/company-logo/logo-3.jpg' %}" alt="Borrow - Loan Company Website Template" class="img-fluid"> </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6"> <img src="{% static 'assets/images/brand/company-logo/logo-4.jpg' %}" alt="Borrow - Loan Company Website Template" class="img-fluid"> </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6"> <img src="{% static 'assets/images/brand/company-logo/logo-5.jpg' %}" alt="Borrow - Loan Company Website Template" class="img-fluid"> </div>
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-6"> <img src="{% static 'assets/images/brand/company-logo/logo-1.jpg' %}" alt="Borrow - Loan Company Website Template" class="img-fluid"> </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-lg-16 py-10">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-12">
+          <div class="mb-10 text-center ">
+            <!-- section title start-->
+            <h1 class="mb-1">Latest News</h1>
+            <p> Our mission is to deliver reliable, latest news and opinions on Finance.</p>
+          </div>
+          <!-- /.section title start-->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card mb-4 mb-lg-0">
+            <div>
+              <a href="#"><img src="{% static 'assets/images/blog/blog-img.jpg' %}" alt="Borrow - Loan Company Website Template" class="img-fluid rounded-top-md"></a>
+            </div>
+            <div class="card-body p-5">
+              <h3 class="mb-2"><a href="#" class="text-inherit">Which growth strategies you should adopt</a></h3>
+                    <p class="fs-6 text-uppercase fw-bold"><span class="border-end pe-2 me-2 border-2">Augest 25, 2022</span><span>By<a href="#!">
+                      Admin</a></span></p>
+              <p>You can develop a market expansion growth strategy by selling new products and services to the current market...</p>
+              <a href="#" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card mb-4 mb-lg-0">
+            <div>
+              <a href="#" class="imghover"><img src="{% static 'assets/images/blog/blog-img-1.jpg' %}" alt="Borrow - Loan Company Website Template" class="img-fluid"></a>
+            </div>
+            <div class="card-body p-5">
+              <h3><a href="#" class="text-inherit">ECB to lend out more of its bonds to ease market squeeze</a></h3>
+              <p class="fs-6 text-uppercase fw-bold"><span class="border-end pe-2 me-2 border-2">Aug 24, 2022</span><span>By<a href="#!">
+                      Admin</a></span></p>
+              <p>The European Central Bank has raised the amount of bonds it can lend against cash to 250 billion euros to ease a market squeeze.. </p>
+              <a href="#" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card mb-4 mb-lg-0">
+            <div>
+              <a href="#" class="imghover"><img src="{% static 'assets/images/blog/blog-img-2.jpg'%}" alt="Borrow - Loan Company Website Templates" class="img-fluid"></a>
+            </div>
+            <div class="card-body p-5">
+              <h3><a href="#" class="text-inherit">Swiss watchdog FINMA sees increased risks for financial sector</a>
+              </h3>
+              <p class="fs-6 text-uppercase fw-bold"><span class="border-end pe-2 me-2 border-2">Aug 23, 2022</span><span>By<a href="#!">
+                      Admin</a></span></p>
+              <p>Swiss financial watchdog FINMA sees heightened danger for the sector given great uncertainty about interest rates and the economy, it said on Thursday..
+              </p>
+              <a href="#" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-lg-16 py-10 bg-white border-top">
+    <div class="container">
+      <div class="row">
+        <div class="offset-xl-2 col-xl-8 col-md-12 col-sm-12 col-12">
+          <div class="mb-8 text-center">
+            <!-- section title-->
+            <h1 class="mb-1">We are Here to Help You</h1>
+            <p>Please let us know how we can assist you.</p>
+          </div>
+          <!-- /.section title-->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card mb-3 mb-lg-0 text-center smooth-shadow-sm">
+            <div class="card-body p-9 ">
+              <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-calendar3 text-primary" viewBox="0 0 16 16">
+                    <path
+                      d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                    <path
+                      d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg></div>
+              <h4 class="mb-3 text-uppercase fw-semi-bold">Apply For Loan</h4>
+              <p class="mb-4">Looking to buy a car or home loan? then apply for loan now.</p>
+              <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card mb-3 mb-lg-0 text-center smooth-shadow-sm">
+            <div class="card-body p-9">
+              <div class="mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-telephone text-primary" viewBox="0 0 16 16">
+                    <path
+                      d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                  </svg></div>
+              <h4 class="mb-3 text-uppercase fw-semi-bold">Call us at </h4>
+              <h1 class="fs-3 mb-0">+44 666-Cravitz(FREE TOLL) </h1>
+              <p> <a href="#" class="fs-5">loans@Cravitzgroup.com</a></p>
+              <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Contact
+                  us</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+          <div class="card mb-3 mb-lg-0  text-center smooth-shadow-sm">
+            <div class="card-body p-9">
+              <div class="mb-6"> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people text-primary" viewBox="0 0 16 16">
+                    <path
+                      d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                  </svg></div>
+              <h4 class="mb-3 text-uppercase fw-semi-bold">Talk to Advisor</h4>
+              <p class="mb-4">Need to loan advise? Talk to our Loan advisors.</p>
+              <a href="#!" class="btn-link border-bottom border-primary border-2 fw-bold fs-5">Meet
+                  The Advisor</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loan Application -->
+  <div class="modal fade " id="applyLoan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Loan Application</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3" method="post" action="{% url 'home:home_view' %}">
+              {% csrf_token %}
+              <div class="col-md-12 col-lg-12">
+                  <label for="inputAddress" class="form-label">Full Name <span style="color:red;">*</span></label>
+                  <input type="text" class="form-control" name="name" placeholder="Enter Your Full Name" required>
+              </div>
+
+              <div class="col-md-12 col-lg-12">
+                <label for="inputAddress" class="form-label">Email <span style="color:red;">*</span></label>
+                <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address" required>
+              </div>
+
+
+              <div class="col-md-12 col-lg-6">
+                  <label for="inputAddress" class="form-label">Phone Number <span style="color:red;">*</span></label>
+                  <input type="number" class="form-control" name="phone" placeholder="Enter Your Phone Number" required>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <label for="inputAddress" class="form-label">Date of Birth <span style="color:red;">*</span></label>
+                <input type="text" class="form-control" name="dob" placeholder="Eg: 01/01/2023" required>
+              </div>
+
+              <div class="col-md-12 col-lg-12">
+                <label for="inputAddress" class="form-label">Address <span style="color:red;">*</span></label>
+                <input type="text" class="form-control" name="address" placeholder="Enter Your Home Address" required>
+              </div>
+
+              <div class="col-md-12 col-lg-12">
+                <label for="inputAddress" class="form-label">Country <span style="color:red;">*</span></label>
+                <input type="text" class="form-control" name="country" placeholder="Enter Your Country" required>
+              </div>
+
+              <div class="col-md-12 col-lg-12">
+                <label for="inputAddress" class="form-label">Occupation <span style="color:red;">*</span></label>
+                <input type="text" class="form-control" name="occupation" placeholder="Enter Your Occupation" required>
+              </div>
+
+              <div class="col-md-12 col-lg-6">
+                <label for="inputAddress" class="form-label">Marital status <span style="color:red;">*</span></label>
+                <select class="form-control" id="exampleFormControlSelect1" name="marital_status" required>
+                  <option value="">--Select an option--</option>
+                  <option value="Married">Married</option>
+                  <option value="Single">Single</option>
+                  <option value="Widowed">Widowed</option>
+                  <option value="Divorced">Divorced</option>
+                </select>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <label for="inputAddress" class="form-label">Loan Amount <span style="color:red;">*</span></label>
+                <input type="number" class="form-control" name="loan_amount" placeholder="Enter Amount" required>
+              </div>
+
+              <div class="col-md-12 col-lg-6">
+                <label for="inputAddress" class="form-label">Purpose of loan <span style="color:red;">*</span></label>
+                <select class="form-control" id="exampleFormControlSelect1" name="loan_type" required>
+                  <option value="">--Select Purpose of loan--</option>
+                  <option value="Education Loan">Education Loan</option>
+                  <option value="Business Loan">Business Loan</option>
+                  <option value="Car Loan">Car Loan</option>
+                  <option value="Personal Loan">Personal Loan</option>
+                  <option value="Home Loan">Home Loan</option>
+                  <option value="Investment Loan">Investment Loan</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <label for="inputAddress" class="form-label">Loan Duration <span style="color:red;">*</span></label>
+                <select class="form-control" id="exampleFormControlSelect1" name="loan_duration" required>
+                  <option value="">---Select Duration---</option>
+                  <option value="6 Months">6 Months</option>
+                  <option value="1 Year">1 Year</option>
+                  <option value="2 Years">2 Years</option>
+                  <option value="3 Years">3 Years</option>
+                  <option value="4 Years">4 Years</option>
+                  <option value="5 Years">5 Years</option>
+                  <option value="6 Years">6 Years</option>
+                  <option value="7 Years">7 Years</option>
+                  <option value="8 Years">8 Years</option>
+                  <option value="9 Years">9 Years</option>
+                  <option value="10 Years">10 Years</option>
+                  <option value="11 Years">11 Years</option>
+                  <option value="12 Years">12 Years</option>
+                  <option value="13 Years">13 Years</option>
+                  <option value="14 Years">14 Years</option>
+                  <option value="15 Years">15 Years</option>
+                  <option value="16 Years">16 Years</option>
+                  <option value="17 Years">17 Years</option>
+                  <option value="18 Years">18 Years</option>
+                  <option value="19 Years">19 Years</option>
+                  <option value="20 Years">20 Years</option>
+                </select>
+              </div>
+
+              <div class="col-md-12 col-lg-12">
+                <label for="inputAddress" class="form-label">Monthly Income <span style="color:red;">*</span></label>
+                <input type="number" class="form-control" name="monthly_income" placeholder="Enter Your Monthly Income" required>
+              </div>
+
+              <div class="col-12" style="text-align: center;">
+                  <button type="submit"  class="pe-5 ps-5 pt-2 pb-2" style="color: white; background-color: #624BFF; border-radius: 5px; border: none;">Apply</button>
+              </div>
+          </form>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer bg-dark pt-8 ">
+    <!-- footer -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-sm-12 col-12">
+                <div class="mb-4 mb-lg-0">
+                    <!-- Footer Logo -->
+                    <img src="{% static 'assets/images/brand/logo/logo1.png' %}" alt="Awesome Logo" title="" width="150" height="160"/></a>
+            
+                </div>
+                <!-- /.Footer Logo -->
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                <form class="row g-0 align-items-center" action="#" method="post">
+                    <div class="col-md-4 col-12 mb-3 mb-md-0">
+                        <h3 class="text-white mb-0">Signup Our Newsletter</h3>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <div class="input-group">
+                            <input type="email" class="form-control border-0
+                shadow-none" id="newsletter" placeholder="Write email address" required aria-describedby="basic-addon2">
+                            <a href="#" class="btn btn-primary" id="basic-addon2">Go!</a>
+                        </div>
+
+                    </div>
+                </form>
+                <!-- /.col-lg-6 -->
+            </div>
+        </div>
+        <hr class="my-6 opacity-25">
+        <div class="row mb-8">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="text-white-50 mb-3">
+                    <!-- widget text -->
+                    <p>Our goal at Cravitz Group is to provide access to personal loans and education loan, car loan, home loan at good interest rates. We are the best online loan provider, you can use our loan product.</p>
+                    <div class="row mt-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6
+                  col-12 mt-3 mt-md-0">
+                            <div class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone text-white mt-1" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                              </svg>
+
+                                <div class="ms-3 fs-3">+44 666-Cravitz</div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                          <div class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-geo-alt text-white mt-1" viewBox="0 0 16 16">
+                              <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z"/>
+                            </svg>
+
+                              <div>loans@Cravitzgroup.com</div>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <!-- /.widget text -->
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <!-- widget footer -->
+                    <ul class="list-unstyled text-muted">
+                        <li class="d-flex">
+                            <a href="{% url 'home:home_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Home</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="{% url 'home:services_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Services</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="{% url 'home:about_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>About Us</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="{% url 'home:news_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>News</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Faq</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="{% url 'home:contact_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.widget footer -->
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <!-- widget footer -->
+                    <ul class="list-unstyled text-muted">
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Car Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Personal Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Education Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Business Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Home Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Debt Consolidation</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.widget footer -->
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <!-- widget footer -->
+                    <ul class="list-unstyled text-muted">
+                        <li class="d-flex"><a href="#!" class="text-inherit">
+                            <i class="fab fa-facebook-f me-2 fs-5"></i>Facebook</a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab fa-google
+                        me-2 fs-5"></i>Google
+                    </a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab fa-twitter
+                        me-2 fs-5"></i>Twitter</a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab
+                        fa-linkedin me-2 fs-5"></i>Linked
+                      In</a></li>
+                    </ul>
+                </div>
+                <!-- /.widget footer -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <p class="fs-6 text-muted">© Copyright 2022 | Cravitz Group</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
+              text-md-end">
+                <p class="fs-6 text-muted"><a href="#" class="text-inherit">Terms
+                  of use</a> |
+                    <a href="#" class="text-inherit">Privacy Policy</a></p>
+            </div>
+        </div>
+    </div>
+</div> <!-- Libs JS -->
+<script src="{% static 'assets/another/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'assets/another/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/another/tiny-slider/dist/min/tiny-slider.js' %}"></script>
+<script src="{% static 'assets/another/nouislider/dist/nouislider.min.js' %}"></script>
+<script src="{% static 'assets/another/wnumb/wNumb.min.js' %}"></script>
+<script src="{% static 'assets/another/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/another/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/another/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/another/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/another/prismjs/prism.js' %}"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+
+<!-- Theme JS -->
+<script src="{% static 'assets/js/theme.min.js' %}"></script>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+  }
+  </script>
+  
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

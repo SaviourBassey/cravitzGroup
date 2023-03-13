@@ -1,0 +1,548 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Cravitz Group Services">
+
+<link rel="icon" href="{% static 'assets/images/brand/logo/logo.png' %}" type="image/png">
+
+
+
+<!-- Libs CSS -->
+
+<link rel="stylesheet" href="{% static 'assets/another/bootstrap-icons/font/bootstrap-icons.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/tiny-slider/dist/tiny-slider.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/nouislider/dist/nouislider.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/fonts/flat-font-icons/css/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'assets/fonts/fontello-icons/fontello.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/magnific-popup/dist/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/jquery-ui/dist/themes/base/jquery-ui.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/another/magnific-popup/dist/magnific-popup.css' %}">
+
+
+
+
+<!-- Theme CSS -->
+
+<link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+
+  <title>Services - Cravitzgroup</title>
+
+  <style>
+    @media screen and (max-width: 500px) {
+      #header-mobileView { 
+          display:none; 
+      }
+  }
+  </style>
+
+</head>
+
+<body>
+    <div class="bg-primary py-1">
+    <!-- top-bar -->
+    <div class="container px-md-0">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-xl-4 col-lg-5 col-md-5 col-12">
+                <div class="fs-6 text-uppercase text-white fw-semi-bold d-flex align-items-center"><span class="me-5">Loan and Credit</span> <span><div id="google_translate_element" style="color:white;"></div></span></div>
+            </div>
+            <div class="col-xl-8 col-lg-7 col-md-7 col-12 text-md-end" id="header-mobileView">
+              <div class="fs-6 text-uppercase text-white fw-semi-bold"><a href="#!" class="ms-2 ms-md-4 "><a href="#!" class="text-white" >+44 666-Cravitz(FREE TOLL)</a></span> <span class="ms-2 ms-md-4"><a href="#!" class="text-white ">loans@Cravitzgroup.com</a></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg py-3 navbar-default">
+    <div class="container px-0">
+        <a class="navbar-brand" href="{% url 'home:home_view' %}"><img src="{% static 'assets/images/brand/logo/logo.png' %}"
+        alt="Awesome Logo" title="" width="146" height="39"/></a>
+      <!-- Button -->
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default"
+        aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar top-bar mt-0"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="navbar-default">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'home:home_view' %}">
+                Home
+            </a>
+            </li>
+    
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'home:about_view' %}">
+                About
+            </a>
+            </li>
+    
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'home:services_view' %}">
+                Services
+            </a>
+            </li>
+    
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'home:news_view' %}">
+                Blog
+            </a>
+            </li>
+    
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'home:contact_view' %}">
+                Contact
+            </a>
+            </li>
+  
+        <div class="ms-lg-3 mt-3 d-grid mt-lg-0">
+  <a data-bs-toggle="modal" data-bs-target="#applyLoan" class="btn btn-primary btn-sm">Apply for Loan</a>
+  </div>
+      </div>
+    </div>
+  </nav>
+  <div class="pt-18 pb-10" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(0, 0, 0, 0.2)url({% static 'assets/images/background/page-header.jpg' %}) no-repeat center;
+  background-size: cover;
+">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+          <div class="bg-white p-5 rounded-top-md">
+            <div class="row align-items-center">
+              <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                <h1 class="mb-0">Our Loan Services</h1>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                <div class="text-md-end mt-3 mt-md-0">
+                  <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyLoan" class="btn btn-primary btn-sm">Apply for Loan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <ul class="nav nav-fill nav-pills-gray-fill">
+              <li class="nav-item ">
+                <a href="{% url 'home:contact_view' %}" class="nav-link">Get intouch</a>
+              </li>
+              <li class="nav-item">
+                <a href="#!" class="nav-link">Emi Caculator</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div>
+        <!-- content start -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="mt-n6 mb-10">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-5 text-center border-0 smooth-shadow-sm">
+                                    <div class="card-img">
+                                        <a href="personal-loan.html" class="imghover"><img src="{% static 'assets/images/blog/blog-img.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid rounded-top-md"></a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3><a href="personal-loan.html" class="text-inherit">Personal Loan</a></h3>
+                                        <p>A Personal Loan from Cravitz Group is a great way to consolidate high-interest rate balances, fund special purchases, or cover major expenses. </p>
+                                        <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyLoan" class="btn btn-primary btn-sm">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-5 text-center border-0 smooth-shadow-sm">
+                                    <div class="card-img rounded-top-md">
+                                        <a href="home-loan.html" class="imghover"><img src="{% static 'assets/images/blog/blog-img-1.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid rounded-top-md"></a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3><a href="home-loan.html" class="text-inherit">Home Loan</a></h3>
+                                        <p>Get a Home loan from Cravitz Group. Calculate your estimated monthly payments and learn the requirements for buying, refinancing or leasing a property. </p>
+                                        <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyLoan" class="btn btn-primary btn-sm">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-5 text-center border-0 smooth-shadow-sm">
+                                    <div class="card-img rounded-top-md">
+                                        <a href="education-loan.html" class="imghover"><img src="{% static 'assets/images/blog/blog-img-2.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid rounded-top-md"></a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3><a href="education-loan.html" class="text-inherit">Education Loan</a></h3>
+                                        <p>Our student loans can help cover up to 100% of your college or graduate school expenses, on campus or online. Apply for a student loan today.</p>
+                                        <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyLoan" class="btn btn-primary btn-sm">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-5 text-center border-0 smooth-shadow-sm">
+                                    <div class="card-img rounded-top-md">
+                                        <a href="#!" class="imghover"><img src="{% static 'assets/images/blog/blog-img-3.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid rounded-top-md"></a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3><a href="#!" class="text-inherit">Business Loan</a></h3>
+                                        <p>We offer a variety of financing options for your business to purchase inventory and materials, refinance debt or finance account receivables. </p>
+                                        <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyLoan" class="btn btn-primary btn-sm">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-5 text-center border-0 smooth-shadow-sm">
+                                    <div class="card-img rounded-top-md">
+                                        <a href="car-loan.html" class="imghover"><img src="{% static 'assets/images/blog/blog-img-4.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid rounded-top-md"></a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3><a href="car-loan.html" class="text-inherit">Car Loan</a></h3>
+                                        <p> Apply online for a new or used Car Loan from Finlon Finance Group. Get approved for a financing based on your needs and within your budget. </p>
+                                        <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyLoan" class="btn btn-primary btn-sm">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card mb-5 text-center border-0 smooth-shadow-sm">
+                                    <div class="card-img rounded-top-md">
+                                        <a href="#!" class="imghover"><img src="{% static 'assets/images/blog/blog-img-5.jpg' %}" alt="Borrow - Loan Company Website Template " class="img-fluid rounded-top-md"></a>
+                                    </div>
+                                    <div class="card-body">
+                                        <h3><a href="#!" class="text-inherit">Investment Loan</a></h3>
+                                        <p>If you need financing for your main or second home, a rental contract or a tax-free project, we support you at every stage: from exploring your options to signing a contract with a notary or later. </p>
+                                        <a href="#!" class="btn btn-primary" data-bs-toggle="modal" data-bs-toggle="modal" data-bs-target="#applyLoan">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-primary py-8 text-center">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                        <h1 class="text-white mb-4">We offer lots more!</h1>
+                                        <a href="#!" class="btn btn-white">Enquire Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.content end -->
+
+    <!-- Loan Application -->
+  <div class="modal fade " id="applyLoan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Loan Application</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3" method="post" action="{% url 'home:home_view' %}">
+                {% csrf_token %}
+                <div class="col-md-12 col-lg-12">
+                    <label for="inputAddress" class="form-label">Full Name <span style="color:red;">*</span></label>
+                    <input type="text" class="form-control" name="name" placeholder="Enter Your Full Name" required>
+                </div>
+  
+                <div class="col-md-12 col-lg-12">
+                  <label for="inputAddress" class="form-label">Email <span style="color:red;">*</span></label>
+                  <input type="text" class="form-control" name="email" placeholder="Enter Your Email Address" required>
+                </div>
+  
+  
+                <div class="col-md-12 col-lg-6">
+                    <label for="inputAddress" class="form-label">Phone Number <span style="color:red;">*</span></label>
+                    <input type="number" class="form-control" name="phone" placeholder="Enter Your Phone Number" required>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                  <label for="inputAddress" class="form-label">Date of Birth <span style="color:red;">*</span></label>
+                  <input type="text" class="form-control" name="dob" placeholder="Eg: 01/01/2023" required>
+                </div>
+  
+                <div class="col-md-12 col-lg-12">
+                  <label for="inputAddress" class="form-label">Address <span style="color:red;">*</span></label>
+                  <input type="text" class="form-control" name="address" placeholder="Enter Your Home Address" required>
+                </div>
+  
+                <div class="col-md-12 col-lg-12">
+                  <label for="inputAddress" class="form-label">Country <span style="color:red;">*</span></label>
+                  <input type="text" class="form-control" name="country" placeholder="Enter Your Country" required>
+                </div>
+  
+                <div class="col-md-12 col-lg-12">
+                  <label for="inputAddress" class="form-label">Occupation <span style="color:red;">*</span></label>
+                  <input type="text" class="form-control" name="occupation" placeholder="Enter Your Occupation" required>
+                </div>
+  
+                <div class="col-md-12 col-lg-6">
+                  <label for="inputAddress" class="form-label">Marital status <span style="color:red;">*</span></label>
+                  <select class="form-control" id="exampleFormControlSelect1" name="marital_status" required>
+                    <option value="">--Select an option--</option>
+                    <option value="Married">Married</option>
+                    <option value="Single">Single</option>
+                    <option value="Widowed">Widowed</option>
+                    <option value="Divorced">Divorced</option>
+                  </select>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                  <label for="inputAddress" class="form-label">Loan Amount <span style="color:red;">*</span></label>
+                  <input type="number" class="form-control" name="loan_amount" placeholder="Enter Amount" required>
+                </div>
+  
+                <div class="col-md-12 col-lg-6">
+                  <label for="inputAddress" class="form-label">Purpose of loan <span style="color:red;">*</span></label>
+                  <select class="form-control" id="exampleFormControlSelect1" name="loan_type" required>
+                    <option value="">--Select Purpose of loan--</option>
+                    <option value="Education Loan">Education Loan</option>
+                    <option value="Business Loan">Business Loan</option>
+                    <option value="Car Loan">Car Loan</option>
+                    <option value="Personal Loan">Personal Loan</option>
+                    <option value="Home Loan">Home Loan</option>
+                    <option value="Investment Loan">Investment Loan</option>
+                    <option value="Others">Others</option>
+                  </select>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                  <label for="inputAddress" class="form-label">Loan Duration <span style="color:red;">*</span></label>
+                  <select class="form-control" id="exampleFormControlSelect1" name="loan_duration" required>
+                    <option value="">---Select Duration---</option>
+                    <option value="6m">6 Months</option>
+                    <option value="1">1 Years</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="4">4 Years</option>
+                    <option value="5">5 Years</option>
+                    <option value="6">6 Years</option>
+                    <option value="7">7 Years</option>
+                    <option value="8">8 Years</option>
+                    <option value="9">9 Years</option>
+                    <option value="10">10 Years</option>
+                    <option value="11">11 Years</option>
+                    <option value="12">12 Years</option>
+                    <option value="13">13 Years</option>
+                    <option value="14">14 Years</option>
+                    <option value="15">15 Years</option>
+                    <option value="16">16 Years</option>
+                    <option value="17">17 Years</option>
+                    <option value="18">18 Years</option>
+                    <option value="19">19 Years</option>
+                    <option value="20">20 Years</option>
+                  </select>
+                </div>
+  
+                <div class="col-md-12 col-lg-12">
+                  <label for="inputAddress" class="form-label">Monthly Income <span style="color:red;">*</span></label>
+                  <input type="number" class="form-control" name="monthly_income" placeholder="Enter Your Monthly Income" required>
+                </div>
+  
+                <div class="col-12" style="text-align: center;">
+                    <button type="submit"  class="pe-5 ps-5 pt-2 pb-2" style="color: white; background-color: #624BFF; border-radius: 5px; border: none;">Apply</button>
+                </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer bg-dark pt-8 ">
+    <!-- footer -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-sm-12 col-12">
+                <div class="mb-4 mb-lg-0">
+                    <!-- Footer Logo -->
+                    <img src="{% static 'assets/images/brand/logo/logo1.png' %}" alt="Awesome Logo" title="" width="150" height="160"/></a>
+            
+                </div>
+                <!-- /.Footer Logo -->
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+                <form class="row g-0 align-items-center" action="#" method="post">
+                    <div class="col-md-4 col-12 mb-3 mb-md-0">
+                        <h3 class="text-white mb-0">Signup Our Newsletter</h3>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <div class="input-group">
+                            <input type="email" class="form-control border-0
+                shadow-none" id="newsletter" placeholder="Write email address" required aria-describedby="basic-addon2">
+                            <a href="#" class="btn btn-primary" id="basic-addon2">Go!</a>
+                        </div>
+
+                    </div>
+                </form>
+                <!-- /.col-lg-6 -->
+            </div>
+        </div>
+        <hr class="my-6 opacity-25">
+        <div class="row mb-8">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                <div class="text-white-50 mb-3">
+                    <!-- widget text -->
+                    <p>Our goal at Cravitz Group is to provide access to personal loans and education loan, car loan, home loan at good interest rates. We are the best online loan provider, you can use our loan product.</p>
+                    <div class="row mt-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6
+                  col-12 mt-3 mt-md-0">
+                            <div class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone text-white mt-1" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                              </svg>
+
+                                <div class="ms-3 fs-3">+44 666-Cravitz</div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="d-flex"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-geo-alt text-white mt-1" viewBox="0 0 16 16">
+                                <path d="m0 0h8v6h-8zm.75 .75v4.5h6.5v-4.5zM0 0l4 3 4-3v1l-4 3-4-3z"/>
+                              </svg>
+
+                                <div>loans@Cravitzgroup.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.widget text -->
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <!-- widget footer -->
+                    <ul class="list-unstyled text-muted">
+                        <li class="d-flex">
+                            <a href="{% url 'home:home_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Home</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="{% url 'home:services_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Services</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="{% url 'home:about_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>About Us</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="{% url 'home:news_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>News</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Faq</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="{% url 'home:contact_view' %}" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.widget footer -->
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <!-- widget footer -->
+                    <ul class="list-unstyled text-muted">
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Car Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Personal Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Education Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Business Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Home Loan</a>
+                        </li>
+                        <li class="d-flex">
+                            <a href="#" class="text-inherit fs-5">
+                                <i class="bi bi-chevron-right fs-6
+                        me-2"></i>Debt Consolidation</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.widget footer -->
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="mb-3">
+                    <!-- widget footer -->
+                    <ul class="list-unstyled text-muted">
+                        <li class="d-flex"><a href="#!" class="text-inherit">
+                            <i class="fab fa-facebook-f me-2 fs-5"></i>Facebook</a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab fa-google
+                        me-2 fs-5"></i>Google
+                    </a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab fa-twitter
+                        me-2 fs-5"></i>Twitter</a></li>
+                        <li class="d-flex"><a href="#!" class="text-inherit"><i class="fab
+                        fa-linkedin me-2 fs-5"></i>Linked
+                      In</a></li>
+                    </ul>
+                </div>
+                <!-- /.widget footer -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <p class="fs-6 text-muted">© Copyright 2022 | Cravitz Group</p>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12
+              text-md-end">
+                <p class="fs-6 text-muted"><a href="#" class="text-inherit">Terms
+                  of use</a> |
+                    <a href="#" class="text-inherit">Privacy Policy</a></p>
+            </div>
+        </div>
+    </div>
+</div> <!-- Libs JS -->
+<script src="{% static 'assets/another/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'assets/another/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/another/tiny-slider/dist/min/tiny-slider.js' %}"></script>
+<script src="{% static 'assets/another/nouislider/dist/nouislider.min.js' %}"></script>
+<script src="{% static 'assets/another/wnumb/wNumb.min.js' %}"></script>
+<script src="{% static 'assets/another/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/another/isotope-layout/dist/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/another/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/another/magnific-popup/dist/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/another/prismjs/prism.js' %}"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+
+<!-- Theme JS -->
+<script src="{% static 'assets/js/theme.min.js' %}"></script>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
